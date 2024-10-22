@@ -1,0 +1,45 @@
+import styled, { css } from 'styled-components'
+
+const Heading = styled.h1`
+  ${(props) =>
+    props.as === 'h1' &&
+    css`
+      font-size: 3rem;
+      font-weight: 600;
+      @media (max-width: 770px) {
+        font-size: 2rem;
+      }
+    `}
+
+  ${(props) =>
+    props.as === 'h2' &&
+    css`
+      font-size: 2rem;
+      font-weight: 600;
+      @media (max-width: 770px) {
+        font-size: 1.2rem;
+      }
+    `}
+    
+    ${(props) =>
+    props.as === 'h3' &&
+    css`
+      font-size: 2rem;
+      font-weight: 500;
+    `}
+    ${(props) =>
+    props.as === 'h5' &&
+    css`
+      font-size: 1rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      width: 180px;
+    `}
+    
+  line-height: 1.4;
+`
+
+export default Heading
